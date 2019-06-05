@@ -32,9 +32,9 @@ The collaboration will center on two core objectives:
 
 1.  *Launch a pilot Limited Liability DAO*
 
-    -   **Design and register a Limited Liability DAO** as a Vermont BBLLC under the guidance of local advisors who assisted with development of Act 205.
+    -   **Form and deploy a Limited Liability DAO** as a Vermont BBLLC under the guidance of local advisors who assisted with development of Act 205.
 
-    -   **Study the DAO** as it begins to conduct business and govern itself through blockchain software linked to underlying formation documents.
+    -   **Prepare the Contractor and Service Agreements** necessary for the DAO to conduct business and manage operations through smart contracts linked to the underlying formation documents.
 
 2.  *Develop guidelines and software to automate the formation and maintenance of Limited Liability DAOs*
 
@@ -124,7 +124,7 @@ language to generate legal contacts for a DAO's:
 
 -   Operations: Contractor & Service Agreements
 
--   Administration: Tax Forms
+-   Maintenance: Tax Forms
 
 ### DAO Creator Tool
 
@@ -141,7 +141,7 @@ platforms to enable the formation of Limited Liability DAOs
 
     a.  The specified DAO configuration
 
-    b.  Additional legal fields such as the administrative participant's name and address
+    b.  Additional legal fields such as any initial members' legal names and mailing addresses
 
 3.  **Entity Deployment and Formation**.
 
