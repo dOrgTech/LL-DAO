@@ -21,14 +21,14 @@ participants from ordinary business liabilities.
 Overview
 --------
 
-The project will probe a live case-study of a BBLLC-linked DAO. In doing so, we
+This research probes a live case-study of a BBLLC-linked DAO. In doing so, we
 hope to address open research questions regarding the design and
 viability of DAOs with traditional legal standing. We also hope to
 highlight insights from this exercise that will allow lawmakers to
 iterate and improve upon blockchain regulatory frameworks like the
 BBLLC.
 
-The collaboration will center on two core objectives:
+The collaboration centers on two core objectives:
 
 1.  *Launch a pilot Limited Liability DAO*
 
@@ -47,9 +47,8 @@ The collaboration will center on two core objectives:
 Challenge Areas
 ---------------
 
-In each area, this research will consider a wide solution
-spectrum-- including blockchain code, contract law, and good faith
-conventions.
+In each Challenge Area, we consider a wide solution spectrum-- including blockchain code, contract law, and good faith
+social conventions.
 
 1.  **Formation**
 
