@@ -82,7 +82,7 @@ social conventions.
 
     -   How are ordinary business liabilities handled?
 
-    -   If the DAO commits a crime who is liable?
+    -   What about criminal liability?
 
 5.  **Tax**
 
