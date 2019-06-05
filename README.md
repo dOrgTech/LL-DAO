@@ -74,9 +74,9 @@ social conventions.
 
         -   Service agreements with clients?
 
-    -   *Arbitration*: how are disputes with the DAO resolved?
+    -   Arbitration: how are disputes with the DAO resolved?
 
-    -   *Liquidated Damages*: what remedies are available when the DAO breaches an agreement?
+    -   Liquidated Damages: what remedies are available when the DAO breaches an agreement?
 
 4.  **Liability**
 
