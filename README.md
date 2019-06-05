@@ -90,15 +90,15 @@ social conventions.
 
     -   How does the DAO pay its taxes?
 
-6.  **Property**: how does the DAO manage off-chain assets
+6.  **Property**
+
+    -   How does the DAO manage off-chain assets?
 
     -   Tangibles: real property, machinery, equipment
 
     -   Intangibles: IP, software licenses, domains
 
-    -   Bank accounts
-
-7.  **Profit Distributions & Tokenization**:
+7.  **Profit Distributions & Tokenization**
 
     -   Determine and encode ownership/governance rights of the DAO's Members
 
