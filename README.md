@@ -200,6 +200,10 @@ Potential Collaborators and Relevant Projects
 
 -   [COALA](https://coala.global)
 
+-   [MIT Computational Law Report](http://law.mit.edu/)
+
+-   [Stanford Journal of Blockchain Law & Policy](https://stanford-jblp.pubpub.org)
+
 -   [Legal Hackers](https://legalhackers.org/)
 
 -   [Mattereum](https://mattereum.com)
