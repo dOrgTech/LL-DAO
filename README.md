@@ -38,11 +38,11 @@ The collaboration will center on two core objectives:
 
 2.  *Develop guidelines and software to automate the formation and maintenance of Limited Liability DAOs*
 
-       ⬜️ **Best practices guide** that addresses all research questions (Challenge Areas)
+       ⬜️ **Legal templates** for auto-generating and executing the required legal agreements.
 
-       ⬜️ **Legal templating framework** for generating and executing the required legal agreements
+       ⬜️ **DAO creation tool** that integrates the templating framework with existing DAO protocols to automate LL-DAO formation.
 
-       ⬜️ **DAO creation tool** that integrates the templating framework with existing DAO protocols to automate LL-DAO formation
+       ⬜️ **Best practices guide** that addresses all Challenge Areas.
 
 Challenge Areas
 ---------------
@@ -71,9 +71,9 @@ conventions.
 
     -   How does the DAO enter into
 
-        -   contractor agreements with contributors?
+        -   Contractor agreements with contributors?
 
-        -   service agreements with clients?
+        -   Service agreements with clients?
 
     -   *Arbitration*: how are disputes with the DAO resolved?
 
@@ -93,7 +93,7 @@ conventions.
 
 6.  **Property**: how does the DAO manage off-chain assets
 
-    -   Tangibles: real property, collectibles
+    -   Tangibles: real property, machinery, equipment
 
     -   Intangibles: IP, software licenses, domains
 
@@ -113,7 +113,7 @@ Desired Outcomes
 ### Documentation
 
 Publish a thorough, well-referenced best practices guide that addresses
-all Challenge Areas, considering the trade-offs for each design decision
+all Challenge Areas, considering the trade-offs for each design decision.
 
 ### Legal Templating Framework
 
@@ -124,20 +124,20 @@ language to generate legal contacts for a DAO's:
 
 -   Operations: Contractor & Service Agreements
 
--   Maintenance: Tax Forms
+-   Maintenance: Tax Forms, Annual Reports
 
 ### DAO Creator Tool
 
 Build a dApp that leverages the templating framework and existing DAO
-platforms to enable the formation of Limited Liability DAOs
+platforms to enable the formation of Limited Liability DAOs.
 
 -   Integrate with dOrg's [DAOcreator](https://dorg.tech/#/) (currently Pre-alpha)
 
 #### User-flow for MVP:
 
-1.  **DAO Configuration.** User goes through DAO configuration steps, specifying each founder and associated voting power, governance modules and other parameters
+1.  **DAO Configuration.** User goes through DAO configuration steps, specifying each founder and associated voting power, governance modules and other parameters.
 
-2.  **BBLLC Configuration**. If the user elects to instantiate the DAO as a BBLLC, formation documents are auto-generated based on
+2.  **BBLLC Configuration**. If the user elects to instantiate the DAO as a BBLLC, formation documents are auto-generated based on:
 
     a.  The specified DAO configuration
 
