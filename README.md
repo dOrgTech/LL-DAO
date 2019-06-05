@@ -34,7 +34,7 @@ The collaboration centers on two core objectives:
 
        - [X] **Form and deploy a Limited Liability DAO** as a Vermont BBLLC under the guidance of local advisors who assisted with development of Act 205.
 
-       - [X] **Prepare the Contractor and Service Agreements** necessary for the DAO to conduct business and manage operations through smart contracts linked to the underlying formation documents.
+       - [X] **Prepare the Contractor and Service Agreements** necessary for the DAO to legitimately conduct business and manage operations through smart contracts.
 
 2.  *Develop guidelines and software to automate the formation and maintenance of Limited Liability DAOs*
 
