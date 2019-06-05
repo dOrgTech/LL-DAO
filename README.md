@@ -38,11 +38,11 @@ The collaboration will center on two core objectives:
 
 2.  *Develop guidelines and software to automate the formation and maintenance of Limited Liability DAOs*
 
-    -   **Best practices guide** that addresses all research questions (Challenge Areas)
+       ⬜️ **Best practices guide** that addresses all research questions (Challenge Areas)
 
-    -   **Legal templating framework** for generating and executing the required legal agreements
+       ⬜️ **Legal templating framework** for generating and executing the required legal agreements
 
-    -   **DAO creation tool** that integrates the templating framework with existing DAO protocols to automate LL-DAO formation
+       ⬜️ **DAO creation tool** that integrates the templating framework with existing DAO protocols to automate LL-DAO formation
 
 Challenge Areas
 ---------------
@@ -159,9 +159,6 @@ platforms to enable the formation of Limited Liability DAOs
 
 -   Develop interface for entity maintenance (bookkeeping, filing taxes, etc.)
 
-Appendix
-========
-
 Goals
 -----
 
@@ -189,10 +186,12 @@ working group*
 
 -   DAO Governance -- enforcement mechanisms and underlying ethics of code-based rules
 
-Potential Collaborators / Relevant Projects
--------------------------------------------
+ 
 
--   [dOrg]{.underline}](https://dorg.tech/#/)
+Potential Collaborators and Relevant Projects
+----------------
+
+-   [dOrg](https://dorg.tech/#/)
 
 -   [Gravel & Shea](https://www.gravelshea.com)
 
