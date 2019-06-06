@@ -68,11 +68,7 @@ social conventions.
 
 3.  **Contracts**
 
-    -   How does the DAO enter into
-
-        -   Contractor agreements with contributors?
-
-        -   Service agreements with clients?
+    -   How does the DAO enter into legally binding agreements with customers and participants?
 
     -   Arbitration: how are disputes with the DAO resolved?
 
@@ -121,7 +117,7 @@ language to generate legal contacts for a DAO's:
 
 -   Formation: Operating Agreement, Articles of Organization
 
--   Operations: Contractor & Service Agreements
+-   Operations: Contractor Agreement, Service Agreements
 
 -   Maintenance: Tax Forms, Annual Reports
 
