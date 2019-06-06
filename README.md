@@ -9,7 +9,7 @@ problem of interfacing DAOs with legacy legal systems.
 
 In July, 2018 Vermont enacted Act 205, which permits limited liability
 companies to manage governance, ownership and conduct material
-operations on a blockchain [[1]](https://legislature.vermont.gov/statutes/section/11/025/04173)[[2]](https://jimhamiltonblog.blogspot.com/2018/06/vermont-permits-llcs-to-operate.html).
+operations on a blockchain [[1]](https://www.coindesk.com/vermontdao-state-governor-signs-bill-clearing-way-blockchain-companies)[[2]](https://legislature.vermont.gov/statutes/section/11/025/04173)[[3]](https://jimhamiltonblog.blogspot.com/2018/06/vermont-permits-llcs-to-operate.html).
 This new legal entity classification, the blockchain-based LLC (BBLLC),
 provides a model to begin designing and testing DAO legal wrappers in
 the wild.
