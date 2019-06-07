@@ -216,7 +216,7 @@ Potential Collaborators and Relevant Projects
 
 -   [Legal.io](https://www.legal.io/)
 
--   [DAO Incubator](http://daoincubator.org/)
+-   [DAOincubator](http://daoincubator.org/)
 
 
 
