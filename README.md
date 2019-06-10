@@ -109,7 +109,7 @@ Design a templating framework that utilizes OpenLaw's legal markup language to g
 
 ### [LL-DAO Web App(s)](./tech)
 
-Build a dApp that leverages the templating framework and existing DAO platforms to enable the formation, operation and maintenance of Limited Liability DAOs.
+Build dApps that leverages the templating framework and existing DAO platforms to enable the formation, operation and maintenance of Limited Liability DAOs.
 
 -   Integrate formation steps with dOrg's [DAOcreator](https://dorg.tech/#/) (pre-alpha)
 -   Develop interface for entity operation and maintenace or integrate with an existing tool, such as DAOstack's [Alchemy](https://alchemy.daostack.io) (alpha)
