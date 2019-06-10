@@ -1,6 +1,6 @@
 
 # LL-DAO Agreement Templates
-Template agreements in the OpenLaw mark-up language
+Templatized agreements marked-up with OpenLaw
 
 ## Agreements
 1. Operating Agreement of [[Company]]
