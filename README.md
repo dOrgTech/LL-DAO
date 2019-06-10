@@ -97,7 +97,7 @@ Desired Outcomes
 
 Publish a thorough, well-referenced best practices guide that addresses all Challenge Areas, considering the trade-offs for each design decision.
 
-### [Legal Templating Framework](./templates)
+### [Legal Agreement Templates](./templates)
 
 Design a templating framework that utilizes OpenLaw's legal markup language to generate legal contacts for a DAO's:
 
