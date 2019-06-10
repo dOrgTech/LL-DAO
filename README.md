@@ -93,11 +93,11 @@ In each Challenge Area, we consider a wide solution spectrum — including block
 Desired Outcomes
 ----------------
 
-### Documentation
+### [Documentation](./guidelines)
 
 Publish a thorough, well-referenced best practices guide that addresses all Challenge Areas, considering the trade-offs for each design decision.
 
-### Legal Templating Framework
+### [Legal Templating Framework](./templates)
 
 Design a templating framework that utilizes OpenLaw's legal markup language to generate legal contacts for a DAO's:
 
@@ -105,40 +105,14 @@ Design a templating framework that utilizes OpenLaw's legal markup language to g
 
 -   Operations: Contractor Agreement, Service Agreements
 
--   Maintenance: Tax Forms, Annual Reports
+-   Maintenance: Bookkeeping, Tax Forms, Annual Reports
 
-### LL-DAO Web App
+### [LL-DAO Web App(s)](./tech)
 
 Build a dApp that leverages the templating framework and existing DAO platforms to enable the formation, operation and maintenance of Limited Liability DAOs.
 
--   Integrate formation steps with dOrg's [DAOcreator](https://dorg.tech/#/) (currently Pre-alpha)
--   Integrate operation and maintenace processes into an open-source DAO management U.I., such as DAOstack's [Alchemy](https://alchemy.daostack.io)
-
-#### User-flow for MVP:
-
-1.  **DAO Configuration.** User goes through DAO configuration steps, specifying each founder and associated voting power, governance modules and other parameters.
-
-2.  **BBLLC Configuration**. If the user elects to instantiate the DAO as a BBLLC, formation documents are auto-generated based on:
-
-    a.  The specified DAO configuration
-
-    b.  Additional legal fields such as any initial members' legal names and mailing addresses
-
-3.  **Entity Deployment and Formation**.
-
-    a.  The DAO's code is deployed to Ethereum
-
-    b.  The BBLLC's Operating Agreement is cryptographically signed by the initial Members, hashed and recorded on Ethereum
-
-    c.  The BBLLC's Articles of Organization are filed with the Secretary of State
-
-    d.  All the above actions and associated fees are bundled into a single atomic transaction (including the state filing fee and payment to a local registered agent)
-
-#### Future Directions:
-
--   Integrate other entity formations (e.g. Malta Technology Arrangement, Wyoming LLC)
-
--   Develop interface for entity maintenance (bookkeeping, filing taxes, etc.)
+-   Integrate formation steps with dOrg's [DAOcreator](https://dorg.tech/#/) (pre-alpha)
+-   Develop interface for entity operation and maintenace or integrate with an existing tool, such as DAOstack's [Alchemy](https://alchemy.daostack.io) (alpha)
 
 Goals
 -----
