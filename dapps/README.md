@@ -27,14 +27,15 @@
 Different scenarios where legal or accounting actions are linked in with governance flows, such as proposals.
 
 ### E-sign legal agreement
-1. Accept/reject work orders
-2. Assign work
+1. Accept/reject customer projects
+2. Accept/reject contractor work orders
 3. Add/remove members
 
 ### Ammend existing legal agreements
 See [templates](./templates)
 
 ### Invoicing
+Payment documentation for completed work orders
 
 ### Taxes
 1. Issuing tax forms to contractors
