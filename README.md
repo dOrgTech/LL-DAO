@@ -176,6 +176,8 @@ Potential Collaborators and Relevant Projects
 Press
 ----------------
 
--  
+-  https://www.gravelshea.com/2019/06/dorg-launches-first-limited-liability-dao/
+-  http://law.mit.edu/bbllc
+-  https://vtblockchainlawblog.com/2019/06/11/dorg-launches-first-limited-liability-dao/
 
 
