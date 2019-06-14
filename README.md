@@ -111,8 +111,8 @@ Design a templating framework that utilizes OpenLaw's legal markup language to g
 
 Build dApps that leverages the templating framework and existing DAO platforms to enable the formation, operation and maintenance of Limited Liability DAOs.
 
--   Integrate formation steps with dOrg's [DAOcreator](https://dorg.tech/#/) (pre-alpha)
--   Develop interface for entity operation and maintenace or integrate with an existing tool, such as DAOstack's [Alchemy](https://alchemy.daostack.io) (alpha)
+-   Integrate formation steps with dOrg's [DAOcreator](https://dorg.tech/#/) and/or Open ESQ's [LLC Launcher](https://limitedliability.me)
+-   Develop interface for entity operation and maintenace or integrate with existing DAO tooling.
 
 Goals
 -----
@@ -143,6 +143,8 @@ Potential Collaborators and Relevant Projects
 
 -   [dOrg](https://dorg.tech/#/)
 
+-   [OpenESQ](https://www.openesq.tech)
+
 -   [Gravel & Shea](https://www.gravelshea.com)
 
 -   [DAOstack](https://daostack.io)
@@ -172,12 +174,5 @@ Potential Collaborators and Relevant Projects
 -   [Legal.io](https://www.legal.io/)
 
 -   [DAOincubator](http://daoincubator.org/)
-
-Press
-----------------
-
--  https://www.gravelshea.com/2019/06/dorg-launches-first-limited-liability-dao/
--  http://law.mit.edu/bbllc
--  https://vtblockchainlawblog.com/2019/06/11/dorg-launches-first-limited-liability-dao/
 
 
