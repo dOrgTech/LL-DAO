@@ -13,8 +13,6 @@ Example - dOrg:
 		"entity" : "BBLLC",
 		"agreements" :[
 			"OperatingAgreement",
-			"NDA",
-			"PrivacyPolicy",
 			"CustomerTerms&Conditon",
 			"ContractorTerms&Conditions"
 		]
@@ -36,9 +34,9 @@ Example - OpenESQ:
 		"entity" : "LLC",
 		"agreements" :[
 			"OperatingAgreement",
+			"RetainerAgreement",
 			"NDA",
-			"PrivacyPolicy",
-			"RetainerAgreement"
+			"PrivacyPolicy"
 		]
 	],
 	"storage" : "IPFS"
