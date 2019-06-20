@@ -28,9 +28,9 @@ The collaboration centers on two core objectives:
 
 2.  *Develop guidelines and software to automate the formation and maintenance of Limited Liability DAOs*
 
-       - [ ] **Legal templates** for auto-generating and executing the required legal agreements to form and manage an LL-DAO.
+       - [ ] **Legal DAO templates** for auto-generating and executing the required legal agreements to form and manage an LL-DAO.
 
-       - [ ] **DAO creation tool** that integrates the templating framework with existing DAO protocols to automate LL-DAO formation.
+       - [ ] **Legal DAO tooling** that integrates the templating framework with existing DAO protocols to automate LL-DAO formation and maintenance.
 
        - [ ] **Best practices guide** that addresses all Challenge Areas.
 
