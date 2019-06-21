@@ -169,9 +169,15 @@ Potential Collaborators and Relevant Projects
 
 -   [MolochDAO](https://molochdao.com/)
 
+-   [MetaCartel](https://www.metacartel.org)
+
 -   [LegalBlock](https://legalblock.co/)
 
 -   [Legal.io](https://www.legal.io/)
+
+-   [Tezos](https://tezos.com)
+
+-   [Atrium](https://www.atrium.co)
 
 -   [DAOincubator](http://daoincubator.org/)
 
