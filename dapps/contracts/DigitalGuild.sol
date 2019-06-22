@@ -106,7 +106,6 @@ library SafeMath {
     }
 }
 
-
 contract DigitalGuild {
   using SafeMath for uint256;
   
@@ -117,13 +116,21 @@ contract DigitalGuild {
   address public _guildMember; 
   address payable public guildTreasury;
   
-  event guildMemberAdded(address indexed  _guildMember);
+  event guildMemberAdded(address indexed _guildMember);
+  
+/**
+* @dev Initializes the Digital Guild contract.
+*/
 
 constructor(string memory _guildSymbol, string memory _guildName, address payable _guildTreasury) public {
         guildSymbol = _guildSymbol;
         guildName = _guildName;
         guildTreasury = _guildTreasury;
 }
+
+/**
+* @dev Allows public to exchange ether (Ξ) tribute for Guild membership.
+*/
 
   function enterGuild() payable public {
     require(msg.value == 0.1 ether);
@@ -132,6 +139,10 @@ constructor(string memory _guildSymbol, string memory _guildName, address payabl
     emit guildMemberAdded(_guildMember);
     address(guildTreasury).transfer(msg.value); // transfer the ether to Guild EthAddress
   }
+
+/**
+* @dev Allows Guild Members to exchange minor ether (Ξ) tribute to make Proposal.
+*/
   
   function addProposal(string memory _guildProposal) payable public onlyGuildMember {
   require(msg.value == 0.001 ether);
@@ -139,10 +150,18 @@ constructor(string memory _guildSymbol, string memory _guildName, address payabl
   address(guildTreasury).transfer(msg.value); // transfer the ether to Guild EthAddress
   }
 
+/**
+* @dev Check if message sender is Guild Member.
+*/
+
   function isGuildMember() public view returns (bool) {
         return msg.sender == _guildMember;
   }
-    
+
+/**
+* @dev Restricts certain functions to Guild Members.
+*/
+
     modifier onlyGuildMember() {
         require(isGuildMember());
         _;
