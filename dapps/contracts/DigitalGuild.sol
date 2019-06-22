@@ -115,7 +115,8 @@ contract DigitalGuild {
   string public guildName;
   string public guildProposal;
   string public guildManifesto;
-  address public _guildMember; 
+  string private guildMandate;
+  address public guildMember; 
   address payable public guildTreasury;
   address public guildMaster;
   
@@ -123,17 +124,20 @@ contract DigitalGuild {
   event guildMasterTransferred(address indexed previousguildMaster, address indexed newguildMaster);
   event guildProposalAdded(string _guildProposal);
   event guildManifestoAdded(string _guildManifesto);
+  event guildMandateAdded(string _guildMandate);
   
 /**
 * @dev Initializes the Digital Guild contract.
 */
 
-constructor(string memory _guildSymbol, string memory _guildName, address _guildMaster, address payable _guildTreasury) public {
+constructor(string memory _guildSymbol, string memory _guildName, string memory _guildManifesto, address _guildMaster, address payable _guildTreasury) public {
         guildSymbol = _guildSymbol;
         guildName = _guildName;
+        guildManifesto = _guildManifesto;
         guildTreasury = _guildTreasury;
         guildMaster = _guildMaster;
 }
+
 
 /**
 * @dev Allows public to exchange ether (Ξ) tribute for Guild membership.
@@ -142,8 +146,9 @@ constructor(string memory _guildSymbol, string memory _guildName, address _guild
   function enterGuild() payable public {
     require(msg.value == 0.1 ether);
     reputation[msg.sender] = 10;
-    _guildMember = msg.sender;
-    emit guildMemberAdded(address(0), _guildMember);
+    guildMember = msg.sender;
+    
+    emit guildMemberAdded(address(0), guildMember);
     address(guildTreasury).transfer(msg.value); // transfer the (Ξ) tribute to Guild EthAddress.
   }
 
@@ -159,21 +164,33 @@ constructor(string memory _guildSymbol, string memory _guildName, address _guild
   }
   
 /**
+* @dev Allows GuildMaster to add Mandate.
+*/
+  
+  function addMandate(string memory _guildMandate) private onlyGuildMaster {
+  guildMandate = _guildMandate;
+  emit guildMandateAdded(guildMandate);
+  }
+  
+/**
 * @dev Allows GuildMaster to add Guild Manifesto.
 */
   
-  function addManifesto(string memory _guildManifesto) public onlyGuildMaster {
+  function updateManifesto(string memory _guildManifesto) public onlyGuildMaster {
   guildManifesto = _guildManifesto;
   emit guildManifestoAdded(_guildManifesto);
   }
 
+ function get() public onlyGuildMember view returns (string memory) {
+        return guildMandate;
+  }
 
 /**
 * @dev Check if message sender is Guild Member.
 */
 
   function isGuildMember() public view returns (bool) {
-        return msg.sender == _guildMember;
+        return msg.sender == guildMember;
   }
   
 /**
