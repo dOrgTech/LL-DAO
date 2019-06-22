@@ -155,7 +155,7 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
   }
 
 /**
-* @dev Allows Guild Members to exchange minor ether (Ξ) tribute to make Proposal.
+* @dev Allows Guild Members to make Proposal.
 */
   
   function addProposal(string memory _guildProposal) public onlyGuildMember {
