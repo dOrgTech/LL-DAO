@@ -119,12 +119,12 @@ contract DigitalGuild {
   address payable public guildTreasury;
   address public guildMaster;
   
-  event guildMemberAdded(address indexed previousguildMember, address indexed newguildMember);
-  event guildMasterTransferred(address indexed previousguildMaster, address indexed newguildMaster);
   event guildProposalAdded(string _guildProposal);
   event guildManifestoAdded(string _guildManifesto);
   event guildMandateAdded(string _guildMandate);
-  
+  event guildMemberAdded(address indexed previousguildMember, address indexed newguildMember);
+  event guildMemberAccessAdded(address indexed previousguildMember, address indexed newguildMemberAccess);
+  event guildMasterRoleTransferred(address indexed previousguildMaster, address indexed newguildMasterRole);
   
 /**
 * @dev Initializes the Digital Guild contract.
@@ -187,8 +187,8 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
 * thereby removing any functionality that is only available to the GuildMaster.
 */
 
-  function renounceGuildMaster() public onlyGuildMaster {
-    emit guildMasterTransferred(guildMaster, address(0));
+  function renounceGuildMasterRole() public onlyGuildMaster {
+    emit guildMasterRoleTransferred(guildMaster, address(0));
     guildMaster = address(0);
   }
 
@@ -196,24 +196,40 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
 * @dev Transfers GuildMaster role over the digital guild contract to a new account (`newguildMaster`).
 * Can only be called by the current GuildMaster.
 */
-   function transferGuildMaster(address newguildMaster) public onlyGuildMaster {
-        _transferGuildMaster(newguildMaster);
+   function transferGuildMasterRole(address newguildMaster) public onlyGuildMaster {
+        _transferGuildMasterRole(newguildMaster);
     }
 
     /**
-     * @dev Transfers ownership of the contract to a new account (`newguildMaster`).
+     * @dev Transfers ownership of the digital guild contract to a new account (`newguildMaster`).
      */
-    function _transferGuildMaster(address newguildMaster) internal {
-        require(newguildMaster != address(0), "Ownable: new GuildMaster is the zero address");
-        emit guildMasterTransferred(guildMaster, newguildMaster);
+    function _transferGuildMasterRole(address newguildMaster) internal {
+        require(newguildMaster != address(0));
+        emit guildMasterRoleTransferred(guildMaster, newguildMaster);
         guildMaster = newguildMaster;
+    }
+    
+/**
+* @dev Transfers GuildMember access over the digital guild contract to a new account (`newguildMember`).
+*/
+  function transferGuildMemberAccess(address newguildMember) public onlyGuildMember {
+        _transferGuildMemberAccess(newguildMember);
+    }
+
+/**
+* @dev Transfers GuildMember access over the digital guild contract to a new account (`newguildMember`).
+*/
+  function _transferGuildMemberAccess(address newguildMemberAccess) internal {
+        require(newguildMemberAccess != address(0));
+        emit guildMemberAccessAdded(guildMember, newguildMemberAccess);
+        guildMember = newguildMemberAccess;
     }
 
 /**
 * @dev Allows Guild Member to view Mandate from ratified Guild Proposal.
 */
 
- function get() public onlyGuildMember view returns (string memory) {
+ function getMandate() public onlyGuildMember view returns (string memory) {
     return guildMandate;
   }
 
