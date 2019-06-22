@@ -165,7 +165,7 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
 * @dev Allows GuildMaster to add Mandate.
 */
   
-  function addMandate(string memory _guildMandate) private onlyGuildMaster {
+  function addMandate(string memory _guildMandate) public onlyGuildMaster {
     guildMandate = _guildMandate;
     emit guildMandateAdded(guildMandate);
   }
@@ -234,7 +234,7 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
   }
 
 /**
-* @dev Check if message-sender is Guild Member.
+* @dev Check if message-sender is Guild Member or their proxy (if role transferred).
 */
 
   function isGuildMember() public view returns (bool) {
@@ -250,7 +250,7 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
   }
 
 /**
-* @dev Restricts certain functions to Guild Members.
+* @dev Restricts certain functions to Guild Members or their proxy (if role transferred).
 */
 
     modifier onlyGuildMember() {
