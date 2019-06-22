@@ -146,7 +146,6 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
     require(msg.value == 0.1 ether);
     reputation[msg.sender] = 10;
     guildMember = msg.sender;
-    
     emit guildMemberAdded(address(0), guildMember);
     address(guildTreasury).transfer(msg.value); // transfer the (Ξ) tribute to Guild EthAddress.
   }
@@ -172,7 +171,7 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
   }
   
 /**
-* @dev Allows GuildMaster to add Guild Manifesto.
+* @dev Allows GuildMaster to update Guild Manifesto.
 */
   
   function updateManifesto(string memory _guildManifesto) public onlyGuildMaster {
@@ -191,6 +190,23 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
   function renounceGuildMaster() public onlyGuildMaster {
     emit guildMasterTransferred(guildMaster, address(0));
     guildMaster = address(0);
+  }
+
+/**
+* @dev Transfers GuildMaster role over the digital guild contract to a new account (`newguildMaster`).
+* Can only be called by the current GuildMaster.
+*/
+   function transferGuildMaster(address newguildMaster) public onlyGuildMaster {
+        _transferGuildMaster(newguildMaster);
+    }
+
+    /**
+     * @dev Transfers ownership of the contract to a new account (`newguildMaster`).
+     */
+    function _transferGuildMaster(address newguildMaster) internal {
+        require(newguildMaster != address(0), "Ownable: new GuildMaster is the zero address");
+        emit guildMasterTransferred(guildMaster, newguildMaster);
+        guildMaster = newguildMaster;
     }
 
 /**
