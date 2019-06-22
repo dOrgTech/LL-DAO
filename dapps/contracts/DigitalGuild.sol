@@ -110,6 +110,8 @@ contract DigitalGuild {
   using SafeMath for uint256;
   
   mapping(address => uint256) public reputation;
+  mapping(address => uint256) public lastActionTimestamp;
+  
   string public guildSymbol;
   string public guildName;
   string public guildProposal;
@@ -198,7 +200,7 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
 */
    function transferGuildMasterRole(address newguildMaster) public onlyGuildMaster {
         _transferGuildMasterRole(newguildMaster);
-    }
+  }
 
     /**
      * @dev Transfers ownership of the digital guild contract to a new account (`newguildMaster`).
@@ -207,14 +209,14 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
         require(newguildMaster != address(0));
         emit guildMasterRoleTransferred(guildMaster, newguildMaster);
         guildMaster = newguildMaster;
-    }
+  }
     
 /**
 * @dev Transfers GuildMember access over the digital guild contract to a new account (`newguildMember`).
 */
   function transferGuildMemberAccess(address newguildMember) public onlyGuildMember {
         _transferGuildMemberAccess(newguildMember);
-    }
+  }
 
 /**
 * @dev Transfers GuildMember access over the digital guild contract to a new account (`newguildMember`).
@@ -223,7 +225,7 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
         require(newguildMemberAccess != address(0));
         emit guildMemberAccessAdded(guildMember, newguildMemberAccess);
         guildMember = newguildMemberAccess;
-    }
+  }
 
 /**
 * @dev Allows Guild Member to view Mandate from ratified Guild Proposal.
@@ -231,6 +233,34 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
 
  function getMandate() public onlyGuildMember view returns (string memory) {
     return guildMandate;
+  }
+
+/**
+* @dev Allows Guild Member in Good Standing to report and reduce other Member "violator" reputation.
+*/
+
+ function reduceReputation(address violator) cooldown public {
+    require(isMemberinGoodStanding(msg.sender));
+    reputation[violator] = reputation[violator].sub(1); 
+  }
+
+/**
+* @dev Allows Guild Member in Good Standing to repair reported and reduced Member "violator" reputation ("ally").
+*/  
+  function repairReputation(address ally) cooldown public {
+    require(isMemberinGoodStanding(msg.sender));
+    require(reputation[ally] < 10);
+    reputation[ally] = reputation[ally].add(1); 
+    lastActionTimestamp[msg.sender] = now;
+  }
+  
+  
+/**
+* @dev Allows public to verify Guild Member status.
+*/  
+  
+  function isMemberinGoodStanding(address x) public view returns (bool) {
+    return reputation[x] > 0;
   }
 
 /**
@@ -266,4 +296,13 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
         require(isGuildMaster());
         _;
     }
+
+/**
+* @dev Restricts number of times Guild Members can report each other for violation of Manifesto/Mandate.
+*/    
+    modifier cooldown() {
+    require(now - lastActionTimestamp[msg.sender] > 1 days);
+    _;
+    lastActionTimestamp[msg.sender] = now;
+   }
 }
