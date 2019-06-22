@@ -114,9 +114,10 @@ contract DigitalGuild {
   
   string public guildSymbol;
   string public guildName;
-  string public guildProposal;
   string public guildManifesto;
+  string public guildProposal;
   string private guildMandate;
+  uint public guildTribute;
   address public guildMember; 
   address payable public guildTreasury;
   address public guildMaster;
@@ -132,10 +133,11 @@ contract DigitalGuild {
 * @dev Initializes the Digital Guild contract.
 */
 
-constructor(string memory _guildSymbol, string memory _guildName, string memory _guildManifesto, address _guildMaster, address payable _guildTreasury) public {
+constructor(string memory _guildSymbol, string memory _guildName, string memory _guildManifesto, uint _guildTribute, address _guildMaster, address payable _guildTreasury) public {
         guildSymbol = _guildSymbol;
         guildName = _guildName;
         guildManifesto = _guildManifesto;
+        guildTribute = _guildTribute;
         guildTreasury = _guildTreasury;
         guildMaster = _guildMaster;
 }
@@ -145,22 +147,20 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
 */
 
   function enterGuild() payable public {
-    require(msg.value == 0.1 ether);
+    require(address(this).balance == guildTribute, "ether tribute (Ξ) must be funded");
+    address(guildTreasury).transfer(address(this).balance); // transfer the ether tribute (Ξ) to Guild EthAddress.
     reputation[msg.sender] = 10;
     guildMember = msg.sender;
     emit guildMemberAdded(address(0), guildMember);
-    address(guildTreasury).transfer(msg.value); // transfer the (Ξ) tribute to Guild EthAddress.
   }
 
 /**
 * @dev Allows Guild Members to exchange minor ether (Ξ) tribute to make Proposal.
 */
   
-  function addProposal(string memory _guildProposal) payable public onlyGuildMember {
-    require(msg.value == 0.001 ether);
+  function addProposal(string memory _guildProposal) public onlyGuildMember {
     guildProposal = _guildProposal;
     emit guildProposalAdded(_guildProposal);
-    address(guildTreasury).transfer(msg.value); // transfer the (Ξ) tribute to Guild EthAddress.
   }
   
 /**
@@ -180,6 +180,18 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
     guildManifesto = _guildManifesto;
     emit guildManifestoAdded(_guildManifesto);
   }
+  
+/**
+* @dev Allows GuildMaster to update tribute amount for Guild Members to enter Guild and refresh their reputation. 
+*/
+
+  function updateTribute(uint _tribute) onlyGuildMaster public {}
+  
+/**
+* @dev Allows GuildMaster to update Guild address to receive Tribute amount. 
+*/	
+
+  function updateGuildTreasury(address _guild) onlyGuildMaster public {}
 
 /**
 * @dev Leaves the digital guild contract without GuildMaster. It will not be possible to call
