@@ -28,11 +28,11 @@ constructor(string memory _guildSymbol, string memory _guildName, address payabl
   require(msg.value == 0.001 ether);
   guildProposal = _guildProposal;
   address(guildTreasury).transfer(msg.value); // transfer the ether to Guild EthAddress
-}
+  }
 
   function isGuildMember() public view returns (bool) {
         return msg.sender == _guildMember;
-    }
+  }
     
     modifier onlyGuildMember() {
         require(isGuildMember());
