@@ -2,19 +2,19 @@ pragma solidity ^0.5.2;
 
 contract Tribute {
   mapping(address => uint256) public reputation;
-  string public symbol;
-  string public name;
-  address payable public guild;
+  string public guildSymbol;
+  string public guildName;
+  address payable public guildTreasury;
 
-constructor(string memory _symbol, string memory _name, address payable _guild) public {
-        symbol = _symbol;
-        name = _name;
-        guild = _guild;
+constructor(string memory _guildSymbol, string memory _guildName, address payable _guildTreasury) public {
+        guildSymbol = _guildSymbol;
+        guildName = _guildName;
+        guildTreasury = _guildTreasury;
 }
 
   function enterGuild() payable public {
-    require(msg.value == 0.01 ether);
+    require(msg.value == 0.1 ether);
     reputation[msg.sender] = 10;
-    address(guild).transfer(msg.value); // transfer the ether to Guild Address
+    address(guildTreasury).transfer(msg.value); // transfer the ether to Guild EthAddress
   }
 }
