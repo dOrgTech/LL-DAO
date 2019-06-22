@@ -106,7 +106,6 @@ library SafeMath {
     }
 }
 
-
 contract DigitalGuild {
   using SafeMath for uint256;
   
@@ -126,6 +125,7 @@ contract DigitalGuild {
   event guildManifestoAdded(string _guildManifesto);
   event guildMandateAdded(string _guildMandate);
   
+  
 /**
 * @dev Initializes the Digital Guild contract.
 */
@@ -137,7 +137,6 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
         guildTreasury = _guildTreasury;
         guildMaster = _guildMaster;
 }
-
 
 /**
 * @dev Allows public to exchange ether (Ξ) tribute for Guild membership.
@@ -157,10 +156,10 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
 */
   
   function addProposal(string memory _guildProposal) payable public onlyGuildMember {
-  require(msg.value == 0.001 ether);
-  guildProposal = _guildProposal;
-  emit guildProposalAdded(_guildProposal);
-  address(guildTreasury).transfer(msg.value); // transfer the (Ξ) tribute to Guild EthAddress.
+    require(msg.value == 0.001 ether);
+    guildProposal = _guildProposal;
+    emit guildProposalAdded(_guildProposal);
+    address(guildTreasury).transfer(msg.value); // transfer the (Ξ) tribute to Guild EthAddress.
   }
   
 /**
@@ -168,8 +167,8 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
 */
   
   function addMandate(string memory _guildMandate) private onlyGuildMaster {
-  guildMandate = _guildMandate;
-  emit guildMandateAdded(guildMandate);
+    guildMandate = _guildMandate;
+    emit guildMandateAdded(guildMandate);
   }
   
 /**
@@ -177,28 +176,45 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
 */
   
   function updateManifesto(string memory _guildManifesto) public onlyGuildMaster {
-  guildManifesto = _guildManifesto;
-  emit guildManifestoAdded(_guildManifesto);
-  }
-
- function get() public onlyGuildMember view returns (string memory) {
-        return guildMandate;
+    guildManifesto = _guildManifesto;
+    emit guildManifestoAdded(_guildManifesto);
   }
 
 /**
-* @dev Check if message sender is Guild Member.
+* @dev Leaves the digital guild contract without GuildMaster. It will not be possible to call
+* `onlyGuildMaster` functions anymore. Can only be called by the current GuildMaster.
+*
+* > Note: Renouncing GuildMaster role will leave the contract without a GuildMaster,
+* thereby removing any functionality that is only available to the GuildMaster.
+*/
+
+  function renounceGuildMaster() public onlyGuildMaster {
+    emit guildMasterTransferred(guildMaster, address(0));
+    guildMaster = address(0);
+    }
+
+/**
+* @dev Allows Guild Member to view Mandate from ratified Guild Proposal.
+*/
+
+ function get() public onlyGuildMember view returns (string memory) {
+    return guildMandate;
+  }
+
+/**
+* @dev Check if message-sender is Guild Member.
 */
 
   function isGuildMember() public view returns (bool) {
-        return msg.sender == guildMember;
+    return msg.sender == guildMember;
   }
   
 /**
-* @dev Check if message sender is GuildMaster.
+* @dev Check if message-sender is GuildMaster.
 */
 
   function isGuildMaster() public view returns (bool) {
-        return msg.sender == guildMaster;
+    return msg.sender == guildMaster;
   }
 
 /**
@@ -211,7 +227,7 @@ constructor(string memory _guildSymbol, string memory _guildName, string memory 
     }
     
 /**
-* @dev Restricts certain functions to GuildMaster role.
+* @dev Restricts certain functions to GuildMaster.
 */
 
     modifier onlyGuildMaster() {
