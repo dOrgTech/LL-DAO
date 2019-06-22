@@ -106,6 +106,7 @@ library SafeMath {
     }
 }
 
+
 contract DigitalGuild {
   using SafeMath for uint256;
   
@@ -113,19 +114,25 @@ contract DigitalGuild {
   string public guildSymbol;
   string public guildName;
   string public guildProposal;
+  string public guildManifesto;
   address public _guildMember; 
   address payable public guildTreasury;
+  address public guildMaster;
   
-  event guildMemberAdded(address indexed _guildMember);
+  event guildMemberAdded(address indexed previousguildMember, address indexed newguildMember);
+  event guildMasterTransferred(address indexed previousguildMaster, address indexed newguildMaster);
+  event guildProposalAdded(string _guildProposal);
+  event guildManifestoAdded(string _guildManifesto);
   
 /**
 * @dev Initializes the Digital Guild contract.
 */
 
-constructor(string memory _guildSymbol, string memory _guildName, address payable _guildTreasury) public {
+constructor(string memory _guildSymbol, string memory _guildName, address _guildMaster, address payable _guildTreasury) public {
         guildSymbol = _guildSymbol;
         guildName = _guildName;
         guildTreasury = _guildTreasury;
+        guildMaster = _guildMaster;
 }
 
 /**
@@ -136,8 +143,8 @@ constructor(string memory _guildSymbol, string memory _guildName, address payabl
     require(msg.value == 0.1 ether);
     reputation[msg.sender] = 10;
     _guildMember = msg.sender;
-    emit guildMemberAdded(_guildMember);
-    address(guildTreasury).transfer(msg.value); // transfer the ether to Guild EthAddress
+    emit guildMemberAdded(address(0), _guildMember);
+    address(guildTreasury).transfer(msg.value); // transfer the (Ξ) tribute to Guild EthAddress.
   }
 
 /**
@@ -147,8 +154,19 @@ constructor(string memory _guildSymbol, string memory _guildName, address payabl
   function addProposal(string memory _guildProposal) payable public onlyGuildMember {
   require(msg.value == 0.001 ether);
   guildProposal = _guildProposal;
-  address(guildTreasury).transfer(msg.value); // transfer the ether to Guild EthAddress
+  emit guildProposalAdded(_guildProposal);
+  address(guildTreasury).transfer(msg.value); // transfer the (Ξ) tribute to Guild EthAddress.
   }
+  
+/**
+* @dev Allows GuildMaster to add Guild Manifesto.
+*/
+  
+  function addManifesto(string memory _guildManifesto) public onlyGuildMaster {
+  guildManifesto = _guildManifesto;
+  emit guildManifestoAdded(_guildManifesto);
+  }
+
 
 /**
 * @dev Check if message sender is Guild Member.
@@ -157,6 +175,14 @@ constructor(string memory _guildSymbol, string memory _guildName, address payabl
   function isGuildMember() public view returns (bool) {
         return msg.sender == _guildMember;
   }
+  
+/**
+* @dev Check if message sender is GuildMaster.
+*/
+
+  function isGuildMaster() public view returns (bool) {
+        return msg.sender == guildMaster;
+  }
 
 /**
 * @dev Restricts certain functions to Guild Members.
@@ -164,6 +190,15 @@ constructor(string memory _guildSymbol, string memory _guildName, address payabl
 
     modifier onlyGuildMember() {
         require(isGuildMember());
+        _;
+    }
+    
+/**
+* @dev Restricts certain functions to GuildMaster role.
+*/
+
+    modifier onlyGuildMaster() {
+        require(isGuildMaster());
         _;
     }
 }
