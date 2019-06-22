@@ -11,7 +11,7 @@ constructor(string memory _guildSymbol, string memory _guildName, address payabl
         guildSymbol = _guildSymbol;
         guildName = _guildName;
         guildTreasury = _guildTreasury;
-}
+  }
 
   function enterGuild() payable public {
     require(msg.value == 0.1 ether);
@@ -23,5 +23,5 @@ constructor(string memory _guildSymbol, string memory _guildName, address payabl
     require(msg.value == 0.001 ether);
     guildProposal = _guildProposal;
     address(guildTreasury).transfer(msg.value); // transfer the ether to Guild EthAddress
-}
+ }
 }
