@@ -20,8 +20,8 @@ constructor(string memory _guildSymbol, string memory _guildName, address payabl
   }
   
   function addProposal(string memory _guildProposal) payable public {
-  require(msg.value == 0.001 ether);
-  guildProposal = _guildProposal;
-  address(guildTreasury).transfer(msg.value); // transfer the ether to Guild EthAddress
+    require(msg.value == 0.001 ether);
+    guildProposal = _guildProposal;
+    address(guildTreasury).transfer(msg.value); // transfer the ether to Guild EthAddress
 }
 }
