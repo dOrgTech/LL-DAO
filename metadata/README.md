@@ -11,11 +11,17 @@ Example - dOrg:
 	"legal" : [
 		"provider" : "Vermont",
 		"entity" : "BBLLC",
-		"agreements" :[
+		"agreements" : [
+			"ArticlesOfOrganization",
 			"OperatingAgreement",
 			"CustomerTerms&Conditon",
 			"ContractorTerms&Conditions"
-		]
+		],
+		"pointOfContact" : [
+			"name" : "Ori Shimony",
+			"address" : "76 St. Paul St, 7th Floor, P.O. Box 369, Burlington, VT 05402"
+		],
+		"businessID" : "0357139"
 	],
 	"storage" : "IPFS"
 }
@@ -32,7 +38,8 @@ Example - OpenESQ:
 	"legal" : [
 		"provider" : "New York",
 		"entity" : "LLC",
-		"agreements" :[
+		"agreements" : [
+			"ArticlesOfOrganization",
 			"OperatingAgreement",
 			"RetainerAgreement",
 			"NDA",
