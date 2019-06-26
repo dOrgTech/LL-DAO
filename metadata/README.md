@@ -19,6 +19,7 @@ Example - dOrg:
 		],
 		"pointOfContact" : [
 			"name" : "Ori Shimony",
+			"email" : "admin@dorg.tech",
 			"address" : "76 St. Paul St, 7th Floor, P.O. Box 369, Burlington, VT 05402"
 		],
 		"businessID" : "0357139"
