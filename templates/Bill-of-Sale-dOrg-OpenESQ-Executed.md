@@ -4,11 +4,13 @@ THIS BILL OF SALE is made between Open, Esq LLC, a(n) New York Limited Liability
 
 Seller hereby grants transfer or sale of the following goods under the terms sufficiently described below: 
 
-*OpenLaw T-Shirt* 
+*OpenLaw T-Shirt*
+
 *Size: Medium*
+
 *Color: Gray*
 
-
+![Image of Item](http://dao.openlaw.io/user/file/version/2B2CB7A547E45993B0111C6B50BD749940FEF15A666856AE31B68E344AE02B0A)
 
 
 (the "***Item***")
