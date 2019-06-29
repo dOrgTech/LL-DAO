@@ -27,11 +27,15 @@ ________________________________________________________________________________
 **OPEN, ESQ LLC**
 
 */s/ Ross Campbell  ([verify signature](https://rinkeby.etherscan.io/tx/0x69968868f8b63fe2a48abd4dc027148ae897ecda94c8b0aadeb0cbd51a29559c))*
+
 Authorized Representative
+
 0x1c0aa8ccd568d90d61659f060d1bfb1e6f855a20 
 
 **DORG, LLC**
 
 */s/ Ori Shimony  ([verify signature](https://rinkeby.etherscan.io/tx/0x443e74a2a675a06ec7720bbe55fb86c6ce18ce54888ba6929b56d08eb32a5361))*
+
 Authorized Representative
+
 0x7f2a1ef39ea0d470b5669ce105a13c5b3bd8cd31
