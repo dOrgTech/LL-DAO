@@ -113,8 +113,7 @@ incorporation process:
 
     -   Customers - pay the DAO (agree to *Customer Terms & Conditions*)
 
-![](../media/image1.jpg){width="4.8473534558180225in"
-height="4.109375546806649in"}
+![](../media/image1.jpg)
 
 -   What happens if someone steals from the DAO?
 
