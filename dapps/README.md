@@ -32,7 +32,7 @@ Different scenarios where legal or accounting actions are linked in with governa
 3. Add/remove members
 
 ### Ammend existing legal agreements
-See [templates](./templates)
+See [templates](../templates)
 
 ### Invoicing
 Payment documentation for completed work orders
