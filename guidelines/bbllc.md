@@ -113,7 +113,7 @@ incorporation process:
 
     -   Customers - pay the DAO (agree to *Customer Terms & Conditions*)
 
-![](../media/image1.jpg)
+![](https://raw.githubusercontent.com/dOrgTech/vision/master/img/struct.jpg)
 
 -   What happens if someone steals from the DAO?
 
