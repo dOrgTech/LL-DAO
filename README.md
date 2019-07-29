@@ -1,5 +1,5 @@
 # LL-DAO
-> Software, templates and best practices for forming and operating Limited Liability DAOs (LL-DAOs).
+> Guidelines, templates and tooling for forming and operating Limited Liability DAOs (LL-DAOs).
 
 Background
 ----------
@@ -9,9 +9,7 @@ Around the world, researchers and practitioners are exploring the problem of int
 In July, 2018 Vermont enacted Act 205, which permits limited liability companies to manage governance, ownership and conduct material
 operations on a blockchain [[1]](https://www.coindesk.com/vermontdao-state-governor-signs-bill-clearing-way-blockchain-companies)[[2]](https://legislature.vermont.gov/statutes/section/11/025/04173)[[3]](https://jimhamiltonblog.blogspot.com/2018/06/vermont-permits-llcs-to-operate.html).
 
-This new legal entity classification, the blockchain-based LLC (BBLLC), provides a model to begin designing and testing DAO legal wrappers in the wild.
-
-If properly utilized, such novel frameworks could empower DAOs to fluidly interoperate with the existing legal system while shielding participants from ordinary business liabilities.
+This new legal entity classification, the blockchain-based LLC (BBLLC), provides a model to begin designing and testing DAO legal wrappers in the wild. If properly utilized, such novel frameworks could empower DAOs to fluidly interoperate with the existing legal system while shielding participants from ordinary business liabilities.
 
 Overview
 --------
@@ -20,102 +18,24 @@ This research probes a live case-study of a BBLLC-linked DAO. In doing so, we ho
 
 The collaboration centers on two core objectives:
 
-1.  *Launch a pilot Limited Liability DAO*
+1.  *Launch a pilot LL-DAO*
 
        - [X] **Form and deploy a Limited Liability DAO** as a Vermont BBLLC under the guidance of local advisors who assisted with development of Act 205.
 
-       - [X] **Prepare the Contractor and Service Agreements** necessary for the DAO to legitimately conduct business activities and manage its core operations through persistent blockchain programs (Smart Contracts).
+       - [X] **Prepare the legal agreements and operational processes** necessary for the DAO to legitimately conduct business activities and manage its core operations through persistent blockchain programs (Smart Contracts).
 
-2.  *Develop guidelines and software to automate the formation and maintenance of Limited Liability DAOs*
+2.  *Develop resources for LL-DAO formation and maintenance*
 
-       - [ ] **Legal DAO templates** for auto-generating and executing the required legal agreements to form and manage an LL-DAO.
+       - [ ] **[Guidelines](guidelines)** that address all Challenge Areas.
 
-       - [ ] **Legal DAO tooling** that integrates the templating framework with existing DAO protocols to automate LL-DAO formation and maintenance.
+       - [ ] **[Template Library](templates)** of useful legal agreements.
 
-       - [ ] **Best practices guide** that addresses all Challenge Areas.
+       - [ ] **[Tooling](tooling)** for automating formation and maintenance workflows.
 
-Challenge Areas
----------------
+Appendix
+--------
 
-In each Challenge Area, we consider a wide solution spectrum — including blockchain code, contract law, and good faith social conventions.
-
-1.  **Formation**
-
-    -   Derive legal formation documents from the DAO's code and *vice versa*.
-
-    -   Automate legal agreement execution via cryptographic signing and hashing.
-
-    -   Record automated legal agreements on-chain and in state registrars when required.
-
-2.  **Maintenance**
-
-    -   How do human person(s) effectively assume the DAO's administrative roles?
-
-    -   How do third parties effectively assume roles such as the DAO's lawyers and accountants?
-
-    -   How can we ensure alignment between the DAO and its surrogate(s)?
-
-3.  **Contracts**
-
-    -   How can the DAO enter into legally binding agreements with customers and participants?
-
-    -   Arbitration: how are disputes with (and within) the DAO resolved?
-
-    -   Liquidated Damages: what remedies are available when the DAO breaches an agreement?
-
-4.  **Liability**
-
-    -   How are ordinary business liabilities handled by the DAO and its participants?
-
-    -   What about criminal liability for participants?
-
-5.  **Tax**
-
-    -   Recommended tax structure (i.e., what elections to make)?
-
-    -   How should the DAO account for and pay taxes?
-
-6.  **Property**
-
-    -   How does the DAO manage off-chain assets?
-
-    -   Tangibles: real property, machinery, equipment?
-
-    -   Intangibles: IP, software licenses, domains?
-
-7.  **Profit Distributions & Tokenization**
-
-    -   Determine and encode ownership/governance rights of the DAO's Members
-
-    -   How can the DAO tokenize its membership or profit interests in a compliant way?
-
-
-Desired Outcomes
-----------------
-
-### [Documentation](./guidelines)
-
-Publish a thorough, well-referenced best practices guide that addresses all Challenge Areas, considering the trade-offs for each design decision.
-
-### [Legal Agreement Templates](./templates)
-
-Design a templating framework that utilizes OpenLaw's legal markup language to generate legal contacts for a DAO's:
-
--   Formation: Operating Agreement, Articles of Organization
-
--   Operations: Contractor Agreement, Service Agreements
-
--   Maintenance: Bookkeeping, Tax Forms, Annual Reports
-
-### [LL-DAO Web App(s)](./tech)
-
-Build dApps that leverages the templating framework and existing DAO platforms to enable the formation, operation and maintenance of Limited Liability DAOs.
-
--   Integrate formation steps with dOrg's [DAOcreator](https://dorg.tech/#/) and/or Open ESQ's [LLC Launcher](https://limitedliability.me)
--   Develop interface for entity operation and maintenace or integrate with existing DAO tooling.
-
-Goals
------
+### Goals
 
 *Adapted from [CL+B Fest 2019](https://legalhackers.org/clbfest2019-resources/) DISCUSS tracks*
 
@@ -138,8 +58,7 @@ Goals
 -   DAO Governance -- enforcement mechanisms and underlying ethics of code-based rules
 
  
-Potential Collaborators and Relevant Projects
-----------------
+### Relevant Projects
 
 -   [dOrg](https://dorg.tech/#/)
 

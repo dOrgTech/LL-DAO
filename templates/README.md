@@ -1,16 +1,8 @@
+# Template Library
+> Library of legal agreement templates for LL-DAOs:
 
-# LL-DAO Agreement Templates
-Templatized agreements marked-up with OpenLaw
+-   Formation: Operating Agreement, Articles of Organization
 
-## Agreements
-1. Operating Agreement of [[Company]]
-2. Terms and Conditions Applicable to Contractors’ Participation in the DAO of [[Company]]
-3. Term Sheet for Contractor Services Provided to [[Company]]
-4. Terms and Conditions Applicable to Customers of [[Company]]
-5. Project Specification Sheet
+-   Operations: Contractor Agreement, Service Agreement, MOU, Bill of Sale
 
-## Users
-- *Participant* - a Member or Contractor
-  - *Member* - anyone who holds units in the DAO
-  - *Contractor* - anyone who agrees to perform work for the DAO
-- *Customer* - anyone who retains the services of the DAO
+-   Maintenance: Bookkeeping, Tax Forms, Annual Reports
