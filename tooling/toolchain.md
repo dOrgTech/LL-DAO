@@ -88,3 +88,36 @@ For use cases, such as...
 - Commits themselves are stored as an IPFS hash due to blockchain scalability / cost constraints.
 - Client purely reads from these decentralized sources
 - Identity and authentication is managed via DAO membership
+
+## JSON Content Schema
+
+### Create
+```
+{
+  action: Create
+  target: <File "Path">
+  content: <IPFS Hash>
+}
+```
+
+### Update
+```
+{
+  action: Update
+  target: <File "Path">
+  prevContent: <IPFS Hash>
+  newContent: <IPFS Hash>
+}
+```
+
+### Delete
+```
+{
+  action: Delete
+  target: <File "Path">
+}
+```
+
+## Future plans
+* Add partial diff support in schema
+
