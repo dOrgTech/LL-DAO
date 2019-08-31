@@ -118,6 +118,18 @@ For use cases, such as...
 }
 ```
 
-## Future plans
+### Solidity Contract Code
+
+```
+contract Signaler {
+  function create(string memory target, string memory content) public pure {}
+
+  function update(string memory target, string memory prevContent, string memory newContent) public pure {}
+
+  function del(string memory target) public pure {}
+}
+```
+
+### Future Plans
 * Add partial diff support in schema
 
